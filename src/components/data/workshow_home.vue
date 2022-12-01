@@ -38,7 +38,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        src: require("../../assets/video/2.mp4")
+                        // src: require("../../assets/video/2.mp4")
                     }
                     ],
                     poster: "/assets/img/1.jpg", //封面地址
@@ -56,7 +56,6 @@ export default {
             
         },
         setStatus(){
-            console.log(123)
             //更改
             this.showhiden = false;
             this.$emit('getShowStatus',this.showhiden)
