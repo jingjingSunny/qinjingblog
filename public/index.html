@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <!-- 看板娘 -->
+    <!-- <link rel="stylesheet" href="/live2d/css/live2d.css" />
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="/live2d/js/message.js"></script> -->
+    <!-- 白猫 -->
+    <script src="./l2dwidget.min.js"></script>
+    <title>myblog</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but myblog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- 看板娘 -->
+    <!-- <canvas id="live2d" width="500" height="500" style="position: fixed; bottom: 0;right:0;"></canvas> -->
+    <!-- built files will be auto injected -->
+    <!-- // var message_Path = '/live2d/' -->
+    <!-- <script type="text/javascript">
+      var home_Path = 'http://localhost/'
+  </script>
+  <script type="text/javascript">
+      loadlive2d("live2d", "/live2d/model/tia/model.json");
+  </script> -->
+  <!-- 白猫 -->
+  <script>
+    var tororo = './tororo/assets/tororo.model.json';
+    function show(path) {
+        config.model.jsonPath = path;
+        L2Dwidget.init(config)
+    }
+    // 配置文件官方API: https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+    var config = {
+        model: {
+            jsonPath: '', // xxx.model.json 的路径
+        },
+        display: {
+          // 超采样等级
+            superSample: 1, 
+            // canvas的宽度
+            width: 350, 
+            // canvas的高度
+            height: 400, 
+            // 显示位置：左或右
+            position: 'right', 
+            // canvas水平偏移
+            hOffset: 0, 
+            // canvas垂直偏移
+            vOffset: 0, 
+        },
+        mobile: {
+          // 是否在移动设备上显示
+            show: true, 
+          // 移动设备上的缩放
+            scale: 1,
+          // 移动设备是否开启重力感应
+            motion: true, 
+        },
+        react: {
+            opacityDefault: 1, // 默认透明度
+            opacityOnHover: 1, // 鼠标移上透明度
+        },
+    }
+    window.onload = function () {
+        show(tororo);
+    }
+  </script>
+  </body>
+  
+</html>
