@@ -7,7 +7,8 @@ import Home from '../page/home'
 import Articel from '../page/article'
 import WorkShow from '../page/workshow'
 export default new Router({
-    mode: 'history',
+    // mode: 'history',
+    mode:'hash',
     routes: [
         {
             name: "首页",
