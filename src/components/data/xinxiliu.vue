@@ -49,8 +49,9 @@ export default {
                     aspectRatio: "16:9",
                     sources: [
                     {
-                        type: "video/mp4",
+                        type: "string",
                         // src: require("../../assets/video/3.mp4")
+                        // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
                     }
                     ],
                     poster: "../../assets/img/1.jpg", //封面地址
