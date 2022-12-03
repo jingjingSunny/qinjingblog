@@ -6,15 +6,28 @@
             </el-tooltip>
         </div>
        
-        <el-carousel indicator-position="none" :autoplay="false">
-            <el-carousel-item v-for="(item,index) in playList" :key="index">
-                 <video-player :options="item.playerOptions" ></video-player>
+        <el-carousel 
+            indicator-position="none" 
+            :autoplay="false" 
+            @change="changeCarousel()"
+            ref="carousel"
+            >
+            <el-carousel-item
+                v-for="(item,index) in playList" 
+                :key="index"
+            >
+                <video-player
+                    :options="item.playerOptions" 
+                    ref="VuevideoPlayer"
+                ></video-player>
             </el-carousel-item>
         </el-carousel>
+        
     </div>
     
 </template>
 <script>
+
 export default {
     name:'Contents',
     props:{"showhidens1":{type:Boolean,default:false}},// 是否显示作品  true显示 false不显示
@@ -24,6 +37,7 @@ export default {
     },
     data(){
         return {
+            index:0,//幻灯片索引 默认第一张
             showhiden:this.showhidens1, // 是否显示作品  true显示 false不显示
             playList:[
             {
@@ -36,7 +50,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        // src: require("../../assets/video/3.mp4")
+                        src: require("../../assets/video/3.mp4")
                     }
                     ],
                     poster: "../../assets/img/1.jpg", //封面地址
@@ -52,7 +66,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        // src: require("../../assets/video/6.mp4")
+                        src: require("../../assets/video/6.mp4")
                     }
                     ],
                     poster: "../../assets/img/5.jpg", //封面地址
@@ -105,7 +119,12 @@ export default {
             //更改
             this.showhiden = false;
             this.$emit('getShowStatus1',this.showhiden)
-        }
+        },
+        changeCarousel(){
+            //  索引
+        let currentindex = this.$refs.carousel.activeIndex
+        this.$refs.VuevideoPlayer[currentindex].player.pause()
+        },
     }
 }
 </script>
