@@ -50,7 +50,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        src: require("../../assets/video/3.mp4")
+                        // src: require("../../assets/video/3.mp4")
                     }
                     ],
                     poster: "../../assets/img/1.jpg", //封面地址
@@ -66,7 +66,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        src: require("../../assets/video/6.mp4")
+                        // src: require("../../assets/video/6.mp4")
                     }
                     ],
                     poster: "../../assets/img/5.jpg", //封面地址
