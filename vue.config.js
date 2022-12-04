@@ -1,4 +1,4 @@
-const data ='./data/data.json'
+const data ='/data/data.json'
 
 module.exports = {
     baseUrl:'./',
