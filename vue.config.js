@@ -7,7 +7,7 @@ module.exports = {
     devServer: {
         // process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
         publicPath:process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
-        assertsDir:'public',
+        // assertsDir:'public',
         // parallel: false,
         // 本地访问
         host: 'localhost',
