@@ -3,7 +3,7 @@
    <div class="banner-warp">
        <div class="banner">
             <div class="banner-inner">
-                还没有想好首页如何炫。
+                首页建造中，敬请期待。
             </div>
        </div>
     </div>
