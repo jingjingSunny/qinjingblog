@@ -1,9 +1,9 @@
 const data = require('./data/data.json');
 module.exports = {
-    baseUrl:'/',
+    baseUrl:'./',
     devServer: {
         // process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
-        // publicPath:process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
+        publicPath:process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
         // parallel: false,
         outputDir: 'dist',
         assertsDir:'public',
