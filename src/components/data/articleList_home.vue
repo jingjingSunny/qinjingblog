@@ -58,7 +58,7 @@ export default {
             let _this = this;
             // 准备参数
             
-            _this.$axios.get('/data.json',{}).then(res=>{
+            _this.$axios.get('/data/data.json',{}).then(res=>{
                 _this.allData = res.data.data.article;
                _this.getTabeData()
                  // 转换时间
