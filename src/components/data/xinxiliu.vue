@@ -50,7 +50,7 @@ export default {
                     sources: [
                     {
                         type: "string",
-                        src: require("/qinjingblog/src/assets/video/3.mp4")
+                        src: require("../../../public/video/3.mp4")
                         // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
                     }
                     ],
