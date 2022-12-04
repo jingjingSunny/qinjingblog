@@ -3,7 +3,7 @@ module.exports = {
     
     devServer: {
         // process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
-        publicPath:'./',
+        publicPath:process.env.NODE_ENV === 'production' ? '/qinjingblog/': './',
         // parallel: false,
         outputDir: 'dist',
         assertsDir:'public',
@@ -20,7 +20,7 @@ module.exports = {
         proxy: {
             '/api':{
                 // 接口域名
-                target: 'http://localhost:8081',
+                target: 'http://localhost:8081/',
                 // 如果接口跨域的参数配置
                 ws: true,
                 changeOrigin: true,
