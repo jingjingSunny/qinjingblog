@@ -1,7 +1,7 @@
 const data =require('./data/data.json')
 
 module.exports = {
-    baseUrl:'./',
+    baseUrl:'/',
     // outputDir: 'dist',
     // assertsDir:'public',
     devServer: {
