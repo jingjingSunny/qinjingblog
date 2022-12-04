@@ -16,7 +16,7 @@ module.exports = {
             http://localhost:8081/data,
             app.get("/data", (req, res) => {
                 // console.log(123456)
-                // console.log(data)
+                console.log(data)
                 res.json(data);
             });
         },
