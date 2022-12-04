@@ -3,7 +3,7 @@ module.exports = {
     
     devServer: {
         // process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
-        publicPath:process.env.NODE_ENV === 'production' ? '/qinjingblog/': './',
+        publicPath:process.env.NODE_ENV === 'production' ? '/qinjingblog/': '/',
         // parallel: false,
         outputDir: 'dist',
         assertsDir:'public',
