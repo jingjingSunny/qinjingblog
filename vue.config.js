@@ -1,4 +1,5 @@
-const data = require('./dist/data.json');
+const data = './data/data.json';
+
 
 module.exports = {
     baseUrl:'./',
