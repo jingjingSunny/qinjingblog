@@ -50,11 +50,11 @@ export default {
                     sources: [
                     {
                         type: "string",
-                        src: require("../../assets/video/3.mp4")
+                        src: require("/qinjingblog/src/assets/video/3.mp4")
                         // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
                     }
                     ],
-                    poster: "../../assets/img/1.jpg", //封面地址
+                    // poster: "../../assets/img/1.jpg", //封面地址
                 },
             },
             {
@@ -70,7 +70,7 @@ export default {
                         // src: require("../../assets/video/6.mp4")
                     }
                     ],
-                    poster: "../../assets/img/5.jpg", //封面地址
+                    // poster: "../../assets/img/5.jpg", //封面地址
                 },
             },
             {
