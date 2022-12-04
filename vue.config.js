@@ -1,4 +1,4 @@
-const data =require('./data/data.json')
+const data ='./data/data.json'
 
 module.exports = {
     baseUrl:'./',
@@ -15,7 +15,6 @@ module.exports = {
             http://localhost:8081/data,
             app.get("/data", (req, res) => {
                 // console.log(123456)
-                console.log(data)
                 res.json(data);
             });
         },
