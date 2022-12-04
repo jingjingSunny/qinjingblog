@@ -1,12 +1,13 @@
 const data =require('./data/data.json')
 
 module.exports = {
-    baseUrl:'/',
+    baseUrl:'./',
     // outputDir: 'dist',
-    // assertsDir:'public',
+    // 
     devServer: {
         // process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
         publicPath:process.env.NODE_ENV === 'production' ? 'http://localhost:8081/': '',
+        assertsDir:'public',
         // parallel: false,
         // 本地访问
         host: 'localhost',
