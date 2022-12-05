@@ -8,7 +8,7 @@
                 placement="top"
             >
                 <div class="list-inner"  @click="toArticle(index)" >
-                    <div class="img"><img :src="require('../../assets/img/dataimg/' + item.src)" /></div>
+                    <!-- <div class="img"><img :src="require('../../assets/img/dataimg/' + item.src)" /></div> -->
                     <div class="img-bot">
                         <span class="title">{{item.title}}</span>
                         <p class="speak">{{item.abstract}}</p>
