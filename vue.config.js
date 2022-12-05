@@ -1,4 +1,4 @@
-const data ='/qinjingblog/dist/data/data.json'
+const data =require('./data/data.json')
 
 module.exports = {
     baseUrl:'./',
