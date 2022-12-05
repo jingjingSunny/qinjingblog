@@ -92,8 +92,8 @@ export default {
             let _this = this;
             // 准备参数
             // /data/data.json
-            // /qinjingblog/data/data.json
-            _this.$axios.get('/qinjingblog/data/data.json',{}).then(res=>{
+            // /qinjingblog/dist/data/data.json
+            _this.$axios.get('/qinjingblog/dist/data/data.json',{}).then(res=>{
                 _this.allData = res.data.data.article;
                _this.getTabeData()
                  // 转换时间
