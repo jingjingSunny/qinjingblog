@@ -6,7 +6,7 @@
             </el-tooltip>
         </div>
        
-        <el-carousel indicator-position="none" :autoplay="false">
+        <el-carousel indicator-position="none" :autoplay="false" :loop="false">
             <el-carousel-item v-for="(item,index) in playList" :key="index">
                  <video-player :options="item.playerOptions" ></video-player>
             </el-carousel-item>

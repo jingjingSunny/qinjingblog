@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" >
 	<!-- 头部 -->
 	<com-nav></com-nav>
   </div>
@@ -8,6 +8,10 @@
 export default {
 	name: 'app',
 	created(){
+		this.$nextTick(()=>{
+			document.oncontextmenu = new Function('event.returnValue=false')
+			// document.onselectstart = new Function('event.returnValue=false')
+		})
 	},
 	
 	methods: {

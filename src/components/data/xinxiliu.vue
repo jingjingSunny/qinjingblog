@@ -1,7 +1,7 @@
 <template>
     <div class="video-warp">
         <div class="video-warp-icon" >
-            <el-tooltip  class="item" effect="dark" content="返回上一步" placement="top-start">
+            <el-tooltip  class="item" effect="dark" content="返回上一步" placement="top-start" >
                 <el-button @click="setStatus"><i class="el-icon-back"></i></el-button>
             </el-tooltip>
         </div>
@@ -11,6 +11,7 @@
             :autoplay="false" 
             @change="changeCarousel()"
             ref="carousel"
+            :loop="false"
             >
             <el-carousel-item
                 v-for="(item,index) in playList" 
@@ -126,9 +127,32 @@ export default {
         },
         changeCarousel(){
             //  索引
-        let currentindex = this.$refs.carousel.activeIndex
-        this.$refs.VuevideoPlayer[currentindex].player.pause()
+        let currentindex = this.$refs.carousel.activeIndex || 0
+        let tempindex =0
+ 
+         if( (currentindex!=tempindex) && (currentindex-1 > 0 || currentindex-1 == 0)) {
+                tempindex = currentindex-1
+         } else {
+            tempindex = currentindex + 1
+         }
+       
+        
+       
+        // else {
+        //     tempindex +=1
+        // }
+        //  console.log(this.$refs);
+        // console.log(currentindex)
+        // if(tempindex < currentindex) {
+        //     tempindex = currentindex
+        //     if(tempindex!=0) {
+        //         tempindex -=1
+        //     }
+        // }
+    //    console.log(tempindex);
+        this.$refs.VuevideoPlayer[tempindex].player.pause()
         },
+        
     }
 }
 </script>
