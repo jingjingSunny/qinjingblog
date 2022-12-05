@@ -1,4 +1,4 @@
-const data ='/qinjingblog/dist/data/data.json/data/data.json'
+const data ='/qinjingblog/dist/data/data.json'
 
 module.exports = {
     baseUrl:'./',
