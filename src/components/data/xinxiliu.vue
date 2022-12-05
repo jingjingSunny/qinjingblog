@@ -16,11 +16,11 @@
                 v-for="(item,index) in playList" 
                 :key="index"
             >
-            <video src="https://jingjingsunny.github.io/qinjingblog/src/assets/video/3.mp4"><video>
-                <!-- <video-player
+            <!-- <video src="https://jingjingsunny.github.io/qinjingblog/src/assets/video/3.mp4"><video> -->
+                <video-player
                     :options="item.playerOptions" 
                     ref="VuevideoPlayer"
-                ></video-player> -->
+                ></video-player>
             </el-carousel-item>
         </el-carousel>
         
