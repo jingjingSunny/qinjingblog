@@ -50,7 +50,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        src: '/qinjingblog/src/assets/video/3.mp4'
+                        src: 'https://jingjingsunny.github.io/qinjingblog/src/assets/video/3.mp4'
                         // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
                     }
                     ],
