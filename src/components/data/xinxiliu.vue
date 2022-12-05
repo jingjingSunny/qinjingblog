@@ -54,7 +54,7 @@ export default {
                         // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/2.png", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
                 },
             },
             {
@@ -104,7 +104,7 @@ export default {
                         // src: require("../../assets/video/5.mp4")
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/5.jpg", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
                 },
             }
             ],
