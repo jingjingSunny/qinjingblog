@@ -68,9 +68,10 @@ export default {
                     {
                         type: "video/mp4",
                         // src: require("../../assets/video/6.mp4")
+                        src:'/qinjingblog/src/assets/video/6.mp4'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/b1.jpg", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.png", //封面地址
                 },
             },
             {
@@ -87,7 +88,7 @@ export default {
                         src:'/qinjingblog/src/assets/video/4.mp4'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/1.jpg", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.png", //封面地址
                 },
             },
             {
