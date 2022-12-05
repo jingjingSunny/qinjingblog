@@ -41,7 +41,7 @@ export default {
                         // src: require("../../assets/video/2.mp4")
                     }
                     ],
-                    poster: "/assets/img/1.jpg", //封面地址
+                    poster: "./assets/img/2.jpg", //封面地址
                 },
             },
             ],
