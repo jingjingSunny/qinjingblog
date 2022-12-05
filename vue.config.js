@@ -1,4 +1,4 @@
-const data ='https://myblogvideo2022.pek3b.qingstor.com/article/data.json'
+const data ='./data/data.json'
 
 module.exports = {
     baseUrl:'./',
