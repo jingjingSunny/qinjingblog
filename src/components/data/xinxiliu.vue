@@ -71,7 +71,7 @@ export default {
                         src:'/qinjingblog/src/assets/video/6.mp4'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/2.png", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
                 },
             },
             {
@@ -88,7 +88,7 @@ export default {
                         src:'/qinjingblog/src/assets/video/4.mp4'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/2.png", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
                 },
             },
             {
