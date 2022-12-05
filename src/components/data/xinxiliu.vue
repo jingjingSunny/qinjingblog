@@ -51,7 +51,7 @@ export default {
                     sources: [
                     {
                         type: "video/mp4",
-                        src: 'https://jingjingsunny.github.io/qinjingblog/src/assets/video/3.mp4'
+                        src: 'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4'
                         // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
                     }
                     ],
@@ -69,7 +69,7 @@ export default {
                     {
                         type: "video/mp4",
                         // src: require("../../assets/video/6.mp4")
-                        src:'/qinjingblog/src/assets/video/6.mp4'
+                        src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4'
                     }
                     ],
                     poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
@@ -86,7 +86,7 @@ export default {
                     {
                         type: "video/mp4",
                         // src: require("../../assets/video/4.mp4")
-                        src:'/qinjingblog/src/assets/video/4.mp4'
+                        src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4'
                     }
                     ],
                     poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
