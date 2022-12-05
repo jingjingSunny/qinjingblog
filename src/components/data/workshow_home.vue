@@ -42,7 +42,7 @@ export default {
                         src:'https://myblogvideo2022.pek3b.qingstor.com/video/2.mp4'
                     }
                     ],
-                    poster: "./assets/img/2.jpg", //封面地址
+                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
                 },
             },
             ],

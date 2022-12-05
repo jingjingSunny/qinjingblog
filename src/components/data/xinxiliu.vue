@@ -72,7 +72,7 @@ export default {
                         src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
+                    poster: "/qinjingblog/src/assets/img/3.jpg", //封面地址
                 },
             },
             {
@@ -89,7 +89,7 @@ export default {
                         src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4'
                     }
                     ],
-                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
+                    poster: "/qinjingblog/src/assets/img/4.jpg", //封面地址
                 },
             },
             {
