@@ -65,7 +65,7 @@ export default {
                 {src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4',title:'传统广告'}
             ],
                 
-                
+            
             
             // playList:[
             // {
