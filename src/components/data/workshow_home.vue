@@ -25,7 +25,7 @@
         </el-carousel> -->
         <div style="width:100%" >
         <el-row >
-            <el-col :span="12"  v-for="(item,index) in playerList" class="elrow-warp">
+            <el-col :span="8"  v-for="(item,index) in playerList" class="elrow-warp">
                 <video 
                     :controls="controls"
                     class="video-box"
@@ -104,6 +104,9 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.el-col-8 {
+    width: 30%;
+}
 .elrow-text{
     display: block;
     margin: 10px 0;
@@ -112,10 +115,12 @@ export default {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .video-box{
     width:360px;
-    height:200px
+    height:200px;
+    // margin:0 auto;
 }
 .clearfloat::after {
     content: "";
@@ -158,6 +163,9 @@ export default {
 }
 .el-button:hover{
     background-color: none;
+}
+.elrow-warp:nth-child(3n-1) {
+    margin: 0 20px;
 }
     
 </style>

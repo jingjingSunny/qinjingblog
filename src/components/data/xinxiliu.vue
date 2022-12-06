@@ -59,6 +59,7 @@ export default {
             index:0,//幻灯片索引 默认第一张
             showhiden:this.showhidens1, // 是否显示作品  true显示 false不显示
             playerList:[
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/00.mp4',title:'抵制暴力'},
                 {src:'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4',title:'回忆家乡'},
                 {src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4',title:'咖啡店探店'},
                 {src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4',title:'传统广告'}
@@ -182,6 +183,9 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.el-col-8 {
+    width: 30%;
+}
 .elrow-text{
     display: block;
     margin: 10px 0;
@@ -190,10 +194,12 @@ export default {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .video-box{
     width:360px;
-    height:200px
+    height:200px;
+    // margin:0 auto;
 }
 .clearfloat::after {
     content: "";
@@ -236,6 +242,9 @@ export default {
 }
 .el-button:hover{
     background-color: none;
+}
+.elrow-warp:nth-child(3n-1) {
+    margin: 0 20px;
 }
     
 </style>

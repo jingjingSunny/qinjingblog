@@ -62,12 +62,12 @@ export default {
 }
 </script>
 <style scoped>
-.leftw {
-    /* width: 100%; */
+/* .leftw {
+    width: 100%;
     position: absolute;
     top: 25%;
     transform: translateY(-50%);
-}
+} */
 .rightW {
     position: relative;
     width: 40%;
