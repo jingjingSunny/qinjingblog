@@ -29,8 +29,11 @@
                 <video 
                     :controls="controls"
                     class="video-box"
-                    :src="item.src">
+                    id="videos"
+                    >
+                    <source :src="item.src" type="video/mp4"/>
                 </video>
+                
                 <span class="elrow-text">{{item.title}}</span>
             </el-col>
         </el-row>
@@ -47,6 +50,12 @@ export default {
     created(){
         // 请求页面所有数据
         // this.testaxios();
+    },
+    mounted(){
+        this.$nextTick(()=>{
+            var video = document.getElementById('videos');
+            video.play();
+        })
     },
     data(){
         return {
