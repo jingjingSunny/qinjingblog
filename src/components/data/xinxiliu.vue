@@ -23,14 +23,15 @@
                 ></video-player>
             </el-carousel-item>
         </el-carousel> -->
-        <div style="width:100%">
-        <el-row>
-            <el-col :span="8"  v-for="(item,index) in playerList">
+        <div style="width:100%" >
+        <el-row >
+            <el-col :span="8"  v-for="(item,index) in playerList" class="elrow-warp">
                 <video 
                     :controls="controls"
                     class="video-box"
                     :src="item.src">
                 </video>
+                <span class="elrow-text">{{item.title}}</span>
             </el-col>
         </el-row>
 
@@ -58,9 +59,9 @@ export default {
             index:0,//幻灯片索引 默认第一张
             showhiden:this.showhidens1, // 是否显示作品  true显示 false不显示
             playerList:[
-                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4'},
-                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4'},
-                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4'}
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4',title:'回忆家乡'},
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4',title:'咖啡店探店'},
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4',title:'传统广告'}
             ],
                 
                 
@@ -181,9 +182,15 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-// .video-warp {
-//     width:360px;
-// }
+.elrow-text{
+    display: block;
+    margin: 10px 0;
+}
+.elrow-warp {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
 .video-box{
     width:360px;
     height:200px

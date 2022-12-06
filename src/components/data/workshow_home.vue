@@ -1,17 +1,41 @@
 <template>
     <div class="video-warp">
         <div class="video-warp-icon" >
-            <el-tooltip  class="item" effect="dark" content="返回上一步" placement="top-start">
+            <el-tooltip  class="item" effect="dark" content="返回上一步" placement="top-start" >
                 <el-button @click="setStatus"><i class="el-icon-back"></i></el-button>
             </el-tooltip>
         </div>
-       
-        <el-carousel indicator-position="none" :autoplay="false" :loop="false">
-            <el-carousel-item v-for="(item,index) in playList" :key="index">
-                 <video-player :options="item.playerOptions" ></video-player>
+       <!-- <el-carousel 
+            indicator-position="none" 
+            :autoplay="false" 
+            @change="changeCarousel()"
+            ref="carousel"
+            :loop="false"
+            >
+            <el-carousel-item
+                v-for="(item,index) in playList" 
+                :key="index"
+            >
+            
+                <video-player
+                    :options="item.playerOptions" 
+                    ref="VuevideoPlayer"
+                ></video-player>
             </el-carousel-item>
-        </el-carousel>
-       
+        </el-carousel> -->
+        <div style="width:100%" >
+        <el-row >
+            <el-col :span="12"  v-for="(item,index) in playerList" class="elrow-warp">
+                <video 
+                    :controls="controls"
+                    class="video-box"
+                    :src="item.src">
+                </video>
+                <span class="elrow-text">{{item.title}}</span>
+            </el-col>
+        </el-row>
+
+        </div>
         
     </div>
     
@@ -26,26 +50,41 @@ export default {
     },
     data(){
         return {
-            showhiden:this.showhidens, // 是否显示作品  true显示 false不显示
-            playList:[
-            {
-                playerOptions: {
-                    // videojs options
-                    muted: true,
-                    language: 'zh-CN',
-                    playbackRates: [0.7, 1.0, 1.5, 2.0],
-                    aspectRatio: "16:9",
-                    sources: [
-                    {
-                        type: "video/mp4",
-                        // src: require("../../assets/video/2.mp4")
-                        src:'https://myblogvideo2022.pek3b.qingstor.com/video/2.mp4'
-                    }
-                    ],
-                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
-                },
+            controls: {
+            type: Boolean,
+            required: false,
+            default: true
             },
+            showhiden:this.showhidens, // 是否显示作品  true显示 false不显示
+            playerList:[
+                {
+                     src:'https://myblogvideo2022.pek3b.qingstor.com/video/2.mp4',
+                     title:'回顾历史 展望未来'
+                },
+                {
+                    src:'https://myblogvideo2022.pek3b.qingstor.com/video/7.mp4',
+                    title:'采蘑菇'
+                }
             ],
+            // playList:[
+            // {
+            //     playerOptions: {
+            //         // videojs options
+            //         muted: true,
+            //         language: 'zh-CN',
+            //         playbackRates: [0.7, 1.0, 1.5, 2.0],
+            //         aspectRatio: "16:9",
+            //         sources: [
+            //         {
+            //             type: "video/mp4",
+            //             // src: require("../../assets/video/2.mp4")
+            //             src:'https://myblogvideo2022.pek3b.qingstor.com/video/2.mp4'
+            //         }
+            //         ],
+            //         poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
+            //     },
+            // },
+            // ],
             // 文章列表
             article: [],
             // 作品列表
@@ -65,6 +104,19 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.elrow-text{
+    display: block;
+    margin: 10px 0;
+}
+.elrow-warp {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+.video-box{
+    width:360px;
+    height:200px
+}
 .clearfloat::after {
     content: "";
     display: block;
@@ -90,10 +142,10 @@ export default {
 .zan img{
    height: 12px; 
 }
-.video-warp {
-    width: 500px;
+// .video-warp {
+//     width: 500px;
     
-}
+// }
 .video-warp-icon {
     text-align: right;
 }
