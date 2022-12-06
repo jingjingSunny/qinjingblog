@@ -24,12 +24,16 @@
             </el-carousel-item>
         </el-carousel> -->
         <div style="width:100%">
-            <video 
-                v-for="(item,index) in playerList"
-                :controls="controls"
-                class="video-box"
-                :src="item.src">
-            </video>
+        <el-row>
+            <el-col :span="8"  v-for="(item,index) in playerList">
+                <video 
+                    :controls="controls"
+                    class="video-box"
+                    :src="item.src">
+                </video>
+            </el-col>
+        </el-row>
+
         </div>
         
     </div>
