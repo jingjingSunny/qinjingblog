@@ -5,8 +5,7 @@
                 <el-button @click="setStatus"><i class="el-icon-back"></i></el-button>
             </el-tooltip>
         </div>
-       
-        <el-carousel 
+       <!-- <el-carousel 
             indicator-position="none" 
             :autoplay="false" 
             @change="changeCarousel()"
@@ -17,13 +16,21 @@
                 v-for="(item,index) in playList" 
                 :key="index"
             >
-            <!-- <video src="https://jingjingsunny.github.io/qinjingblog/src/assets/video/3.mp4"><video> -->
+            
                 <video-player
                     :options="item.playerOptions" 
                     ref="VuevideoPlayer"
                 ></video-player>
             </el-carousel-item>
-        </el-carousel>
+        </el-carousel> -->
+        <div style="width:100%">
+            <video 
+                v-for="(item,index) in playerList"
+                :controls="controls"
+                class="video-box"
+                :src="item.src">
+            </video>
+        </div>
         
     </div>
     
@@ -39,77 +46,90 @@ export default {
     },
     data(){
         return {
+            controls: {
+            type: Boolean,
+            required: false,
+            default: true
+            },
             index:0,//幻灯片索引 默认第一张
             showhiden:this.showhidens1, // 是否显示作品  true显示 false不显示
-            playList:[
-            {
-               playerOptions: {
-                    // videojs options
-                    muted: true,
-                    language: 'zh-CN',
-                    playbackRates: [0.7, 1.0, 1.5, 2.0],
-                    aspectRatio: "16:9",
-                    sources: [
-                    {
-                        type: "video/mp4",
-                        src: 'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4'
-                        // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
-                    }
-                    ],
-                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
-                },
-            },
-            {
-               playerOptions: {
-                    // videojs options
-                    muted: true,
-                    language: 'zh-CN',
-                    playbackRates: [0.7, 1.0, 1.5, 2.0],
-                    aspectRatio: "16:9",
-                    sources: [
-                    {
-                        type: "video/mp4",
-                        // src: require("../../assets/video/6.mp4")
-                        src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4'
-                    }
-                    ],
-                    poster: "/qinjingblog/src/assets/img/3.jpg", //封面地址
-                },
-            },
-            {
-               playerOptions: {
-                    // videojs options
-                    muted: true,
-                    language: 'zh-CN',
-                    playbackRates: [0.7, 1.0, 1.5, 2.0],
-                    aspectRatio: "16:9",
-                    sources: [
-                    {
-                        type: "video/mp4",
-                        // src: require("../../assets/video/4.mp4")
-                        src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4'
-                    }
-                    ],
-                    poster: "/qinjingblog/src/assets/img/4.jpg", //封面地址
-                },
-            },
-            {
-               playerOptions: {
-                    // videojs options
-                    muted: true,
-                    language: 'zh-CN',
-                    playbackRates: [0.7, 1.0, 1.5, 2.0],
-                    aspectRatio: "16:9",
-                    sources: [
-                    {
-                        type: "video/mp4",
-                        // src: require("../../assets/video/5.mp4")
-                    }
-                    ],
-                    poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
-                },
-            }
+            playerList:[
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4'},
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4'},
+                {src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4'}
             ],
+                
+                
+            
+            // playList:[
+            // {
+            //    playerOptions: {
+            //         // videojs options
+            //         muted: true,
+            //         language: 'zh-CN',
+            //         playbackRates: [0.7, 1.0, 1.5, 2.0],
+            //         aspectRatio: "16:9",
+            //         sources: [
+            //         {
+            //             type: "video/mp4",
+            //             src: 'https://myblogvideo2022.pek3b.qingstor.com/video/3.mp4'
+            //             // src:'https://pan.baidu.com/s/1WhvoSrVj1llohruI5oY5gA?pwd=6666'
+            //         }
+            //         ],
+            //         poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
+            //     },
+            // },
+            // {
+            //    playerOptions: {
+            //         // videojs options
+            //         muted: true,
+            //         language: 'zh-CN',
+            //         playbackRates: [0.7, 1.0, 1.5, 2.0],
+            //         aspectRatio: "16:9",
+            //         sources: [
+            //         {
+            //             type: "video/mp4",
+            //             // src: require("../../assets/video/6.mp4")
+            //             src:'https://myblogvideo2022.pek3b.qingstor.com/video/6.mp4'
+            //         }
+            //         ],
+            //         poster: "/qinjingblog/src/assets/img/3.jpg", //封面地址
+            //     },
+            // },
+            // {
+            //    playerOptions: {
+            //         // videojs options
+            //         muted: true,
+            //         language: 'zh-CN',
+            //         playbackRates: [0.7, 1.0, 1.5, 2.0],
+            //         aspectRatio: "16:9",
+            //         sources: [
+            //         {
+            //             type: "video/mp4",
+            //             // src: require("../../assets/video/4.mp4")
+            //             src:'https://myblogvideo2022.pek3b.qingstor.com/video/4.mp4'
+            //         }
+            //         ],
+            //         poster: "/qinjingblog/src/assets/img/4.jpg", //封面地址
+            //     },
+            // },
+            // {
+            //    playerOptions: {
+            //         // videojs options
+            //         muted: true,
+            //         language: 'zh-CN',
+            //         playbackRates: [0.7, 1.0, 1.5, 2.0],
+            //         aspectRatio: "16:9",
+            //         sources: [
+            //         {
+            //             type: "video/mp4",
+            //             // src: require("../../assets/video/5.mp4")
+            //         }
+            //         ],
+            //         poster: "/qinjingblog/src/assets/img/2.jpg", //封面地址
+            //     },
+            // }
+            // ],
             // 文章列表
             article: [],
             // 作品列表
@@ -157,6 +177,13 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+// .video-warp {
+//     width:360px;
+// }
+.video-box{
+    width:360px;
+    height:200px
+}
 .clearfloat::after {
     content: "";
     display: block;
@@ -182,10 +209,10 @@ export default {
 .zan img{
    height: 12px; 
 }
-.video-warp {
-    width: 500px;
+// .video-warp {
+//     width: 500px;
     
-}
+// }
 .video-warp-icon {
     text-align: right;
 }

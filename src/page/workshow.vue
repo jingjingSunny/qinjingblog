@@ -63,9 +63,9 @@ export default {
 </script>
 <style scoped>
 .leftw {
-    width: 60%;
+    /* width: 100%; */
     position: absolute;
-    top: 35%;
+    top: 25%;
     transform: translateY(-50%);
 }
 .rightW {
